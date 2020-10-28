@@ -1,7 +1,16 @@
 import '../css/tailwind.css'
+import Header from '../components/header'
+import Container from '../components/container'
 
 function MainApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return(
+    <>
+    <Header />
+    <Container>
+      <Component {...pageProps} />
+    </Container>
+    </>
+  )
 }
 
 // Only uncomment this method if you have blocking data requirements for

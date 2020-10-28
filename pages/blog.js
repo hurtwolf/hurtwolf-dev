@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { API, CMS_NAME, CMS_SLOGAN } from '../lib/constants'
 import BlogList from '../components/bloglist'
 
-function Index({posts}){
+function Blog({posts}){
   return (
     <>
     <Head>
@@ -10,6 +10,7 @@ function Index({posts}){
       <meta property="og:title" content={CMS_NAME} key="title" />
     </Head>
     <div>
+      <p className="mb-3">Blog</p>
       <BlogList posts={posts}/>
     </div>
     </>
@@ -34,4 +35,4 @@ export async function getStaticProps() {
   }
 }
 
-export default Index
+export default Blog

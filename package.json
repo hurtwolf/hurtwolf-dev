@@ -5,6 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "autoprefixer": "^10.0.1",
+    "dotenv": "^8.2.0",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
     "next": "^10.0.0",
     "postcss": "^8.1.4",
     "postcss-cli": "^8.1.0",
