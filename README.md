@@ -1,2 +1,2 @@
 # hurtwolf-dev
- Personal site to be hosted on Vercel, using NextJS
+ Personal site to be hosted on Vercel, using NextJS.
