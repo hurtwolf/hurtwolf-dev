@@ -1,17 +1,26 @@
 import Head from 'next/head'
+import Moment from 'moment'
+import Link from 'next/link'
 import { API, CMS_NAME, CMS_SLOGAN } from '../lib/constants'
 import BlogList from '../components/bloglist'
 
 function Index({posts}){
+  const latestPost = posts[0]
   return (
     <>
     <Head>
       <title>{CMS_NAME} - {CMS_SLOGAN}</title>
       <meta property="og:title" content={CMS_NAME} key="title" />
     </Head>
-    <div>
-      <BlogList posts={posts}/>
+    <div key={latestPost._id} className="latest-post bg-gradient-to-r from-gray-200 py-4 px-6 mb-4 rounded">
+      <Link href={`/blog/${encodeURIComponent(latestPost.slug)}`} className="text-blue-600">
+        <a className="text-blue-600 hover:underline text-lg mr-4">
+          {latestPost.title}
+        </a>
+      </Link>
+      <span className="text-gray-500">{Moment(latestPost.published_at).fromNow()}</span>
     </div>
+    <BlogList posts={posts}/>
     </>
   )
 }

@@ -19,7 +19,7 @@ export default class Header extends Component {
     const { isOpen } = this.state
     return (
       <nav className="flex items-center justify-between flex-wrap border-b border-gray-300 p-4">
-        <div className="container px-6 mx-auto flex flex-wrap items-center justify-between">
+        <div className="container px-2 lg:px-6 mx-auto flex flex-wrap items-center justify-between">
           <div className="flex items-center flex-shrink-0 mr-6">
             <Link href="/">
               <a className="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
