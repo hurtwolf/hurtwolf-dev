@@ -6,7 +6,7 @@ import 'nprogress/nprogress.css'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import Container from '../components/container'
-import { CMS_NAME, CMS_SLOGAN } from '../lib/constants'
+import { CMS_NAME, CMS_SLOGAN, CMS_URL } from '../lib/constants'
 
 Router.onRouteChangeStart = () => NProgress.start()
 Router.onRouteChangeComplete = () => NProgress.done()
@@ -17,11 +17,16 @@ function MainApp({ Component, pageProps }) {
     <>
     <Head>
       <title>{CMS_NAME} - {CMS_SLOGAN}</title>
+      <meta charset="utf-8" />
       <meta property="og:title" content={CMS_NAME} key="title" />
-      <meta name="description" lang="en" content="Another personal blog" />
+      <meta name="og:description" lang="en" content="Another personal blog" />
       <meta name="keywords" lang="en" content="Blog, Personal, News" />
       <meta name="author" content="Hurtwolf" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width" />
+      <meta name="twitter:site" content="@hurtwxlf" />
+      <meta name="twitter:creator" content="@hurtwxlf" />
+      <meta property="og:url" content={CMS_URL} />
+      <meta property="og:type" content="article" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
