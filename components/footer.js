@@ -8,8 +8,8 @@ export default function Footer(){
         <div className="w-2/4">
           <div className="flex text-sm text-gray-500 justify-end font-semibold">
             <a className="mr-4 hover:text-gray-900" href="https://twitter.com/hurtwxlf">Twitter</a>
-            <a className="mr-4 hover:text-gray-900" href="https://github.com/hurtwolf/hurtwolf-dev">Github Repo</a>
-            <a className="hover:text-gray-900" href="https://vercel.com/">Deploy</a>
+            <a className="mr-4 hover:text-gray-900" href="https://github.com/hurtwolf">Github</a>
+            <a className="hover:text-gray-900" href="https://nextjs.org/">Learn</a>
           </div>
         </div>
       </div>

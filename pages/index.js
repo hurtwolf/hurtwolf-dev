@@ -1,7 +1,6 @@
-import Head from 'next/head'
 import Moment from 'moment'
 import Link from 'next/link'
-import { API, CMS_NAME, CMS_SLOGAN } from '../lib/constants'
+import { API } from '../lib/constants'
 import BlogList from '../components/bloglist'
 
 function Index({posts}){
@@ -27,7 +26,7 @@ export async function getStaticProps() {
     type: 'posts',
     read_key: process.env.READ_KEY,
     limit: 20,
-    props: ['slug', 'title', 'content', '_id', 'published_at', 'created_at']
+    props: ['slug', 'title', 'content', '_id', 'created_at']
   }
   const res = await fetch(`${API.POSTS}?pretty=true&hide_metafields=true&type=${options.type}&read_key=${options.read_key}&limit=${options.limit}&props=${options.props}`)
   const posts_json = await res.json()
