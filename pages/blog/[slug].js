@@ -6,7 +6,7 @@ function Post({post}){
   return (
     <>
     <Head>
-      <title>{CMS_NAME} - {post.title}</title>
+      <title>{post.title} - {CMS_NAME}</title>
       <meta property="og:title" content={post.title} key="title" />
     </Head>
     <BlogPost post={post}/>
