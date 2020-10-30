@@ -1,6 +1,13 @@
 import '../css/tailwind.css'
+import Router from 'next/router'
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 import Header from '../components/header'
 import Container from '../components/container'
+
+Router.onRouteChangeStart = () => NProgress.start()
+Router.onRouteChangeComplete = () => NProgress.done()
+Router.onRouteChangeError = () => NProgress.done()
 
 function MainApp({ Component, pageProps }) {
   return(
