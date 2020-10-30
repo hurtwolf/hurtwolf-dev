@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Moment from 'moment'
 
-export default function bloglist({posts}) {
+export default function BlogList({posts}) {
   return (
     posts.map((post) => {
       return(
@@ -11,7 +11,7 @@ export default function bloglist({posts}) {
               {post.title}
             </a>
           </Link>
-          <span className="text-gray-500">{Moment(post.published_at).fromNow()}</span>
+          <span className="text-gray-500">{Moment(post.created_at).fromNow()}</span>
         </div>
       )
     })

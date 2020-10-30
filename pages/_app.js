@@ -3,6 +3,7 @@ import Router from 'next/router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import Header from '../components/header'
+import Footer from '../components/footer'
 import Container from '../components/container'
 
 Router.onRouteChangeStart = () => NProgress.start()
@@ -15,6 +16,7 @@ function MainApp({ Component, pageProps }) {
     <Header />
     <Container>
       <Component {...pageProps} />
+      <Footer />
     </Container>
     </>
   )

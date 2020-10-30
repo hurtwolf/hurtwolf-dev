@@ -39,7 +39,7 @@ export default class Header extends Component {
                   Blog
                 </a>
               </Link>
-              <a href="https://twitter.com/hurtwxlf" rel="noopener noreferrer" className="block lg:inline-block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded md:mt-0 md:ml-2 hover:text-gray-900 focus:text-gray-900 bg-gray-200 hover:bg-gray-300 focus:outline-none focus:shadow-outline">
+              <a href="https://twitter.com/hurtwxlf" rel="noopener noreferrer" className="block lg:inline-block px-4 py-2 mt-2 text-sm font-semibold rounded md:mt-0 md:ml-2 bg-gray-200 hover:bg-gray-300 focus:outline-none focus:shadow-outline">
                 Follow
               </a>
             </div>
