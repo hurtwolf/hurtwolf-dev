@@ -19,7 +19,7 @@ export async function getServerSideProps({ params: { slug } }) {
     type: 'posts',
     read_key: process.env.READ_KEY,
     limit: 20,
-    props: ['slug', 'title', 'content', '_id', 'published_at', 'metadata', 'created_at']
+    props: ['slug', 'title', 'content', '_id', 'metadata', 'created_at', 'thumbnail']
   }
   const res = await fetch(`${API.POST}/${slug}?pretty=true&hide_metafields=true&read_key=${options.read_key}&props=${options.props}`)
   const post_json = await res.json()

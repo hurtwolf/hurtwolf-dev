@@ -1,4 +1,5 @@
 import '../css/tailwind.css'
+import '../css/style.css'
 import Router from 'next/router'
 import Head from 'next/head'
 import NProgress from 'nprogress'
